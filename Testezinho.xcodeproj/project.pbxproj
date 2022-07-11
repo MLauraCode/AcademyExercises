@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		760072BE287C98050021D774 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760072BD287C98050021D774 /* PopularCollectionViewCell.swift */; };
+		760072C0287C984B0021D774 /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760072BF287C984B0021D774 /* NowPlayingCollectionViewCell.swift */; };
+		760072C2287C989A0021D774 /* UpcomingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760072C1287C989A0021D774 /* UpcomingCollectionViewCell.swift */; };
 		76F4F7E52873777800770739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F4F7E42873777800770739 /* AppDelegate.swift */; };
 		76F4F7E72873777800770739 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F4F7E62873777800770739 /* SceneDelegate.swift */; };
-		76F4F7E92873777800770739 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F4F7E82873777800770739 /* ViewController.swift */; };
+		76F4F7E92873777800770739 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F4F7E82873777800770739 /* FeaturedViewController.swift */; };
 		76F4F7EC2873777800770739 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F4F7EA2873777800770739 /* Main.storyboard */; };
 		76F4F7EE2873777800770739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F4F7ED2873777800770739 /* Assets.xcassets */; };
 		76F4F7F12873777800770739 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F4F7EF2873777800770739 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		760072BD287C98050021D774 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
+		760072BF287C984B0021D774 /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
+		760072C1287C989A0021D774 /* UpcomingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCollectionViewCell.swift; sourceTree = "<group>"; };
 		76F4F7E12873777800770739 /* Testezinho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testezinho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F4F7E42873777800770739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76F4F7E62873777800770739 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		76F4F7E82873777800770739 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76F4F7E82873777800770739 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		76F4F7EB2873777800770739 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76F4F7ED2873777800770739 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76F4F7F02873777800770739 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +43,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		760072C3287C99270021D774 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				76F4F7E82873777800770739 /* FeaturedViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		760072C4287C99DC0021D774 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76F4F7EA2873777800770739 /* Main.storyboard */,
+				76F4F7EF2873777800770739 /* LaunchScreen.storyboard */,
+				760072BD287C98050021D774 /* PopularCollectionViewCell.swift */,
+				760072BF287C984B0021D774 /* NowPlayingCollectionViewCell.swift */,
+				760072C1287C989A0021D774 /* UpcomingCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		760072C5287C9E140021D774 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				76F4F7ED2873777800770739 /* Assets.xcassets */,
+				76F4F7F22873777800770739 /* Info.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		76F4F7D82873777800770739 = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +93,9 @@
 			children = (
 				76F4F7E42873777800770739 /* AppDelegate.swift */,
 				76F4F7E62873777800770739 /* SceneDelegate.swift */,
-				76F4F7E82873777800770739 /* ViewController.swift */,
-				76F4F7EA2873777800770739 /* Main.storyboard */,
-				76F4F7ED2873777800770739 /* Assets.xcassets */,
-				76F4F7EF2873777800770739 /* LaunchScreen.storyboard */,
-				76F4F7F22873777800770739 /* Info.plist */,
+				760072C3287C99270021D774 /* Controllers */,
+				760072C5287C9E140021D774 /* SupportingFiles */,
+				760072C4287C99DC0021D774 /* View */,
 			);
 			path = Testezinho;
 			sourceTree = "<group>";
@@ -138,7 +171,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76F4F7E92873777800770739 /* ViewController.swift in Sources */,
+				760072C2287C989A0021D774 /* UpcomingCollectionViewCell.swift in Sources */,
+				760072C0287C984B0021D774 /* NowPlayingCollectionViewCell.swift in Sources */,
+				760072BE287C98050021D774 /* PopularCollectionViewCell.swift in Sources */,
+				76F4F7E92873777800770739 /* FeaturedViewController.swift in Sources */,
 				76F4F7E52873777800770739 /* AppDelegate.swift in Sources */,
 				76F4F7E72873777800770739 /* SceneDelegate.swift in Sources */,
 			);
