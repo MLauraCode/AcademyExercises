@@ -10,7 +10,7 @@ import UIKit
 class DetailsViewController: UIViewController {
     
     var movie: Movie?
-
+    
     
     @IBOutlet var backdropImage: UIImageView!
     @IBOutlet var titleLabel: UILabel!
@@ -22,37 +22,37 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         
-        guard let movie = movie else {
-            return
-        }
         
-        // novo
+        guard let movie = movie else {return}
+        
         self.title = movie.title
         
         Task{
-            let imageData = await Movie.downloadImageData(withPath:movie.backdropPath)
-            let imagem = UIImage(data: imageData) ?? UIImage()
-            self.backdropImage.image = imagem
+            // baixando backdrop
+            let backdropImage = await Movie.downloadImageData(withPath:movie.backdropPath)
+            let imageBackdrop = UIImage(data: backdropImage) ?? UIImage()
+            self.backdropImage.image = imageBackdrop
+            
+            // baixando poster
+            let posterImage = await Movie.downloadImageData(withPath:movie.posterPath)
+            let imagemPoster = UIImage(data: posterImage)
+            self.posterImage.image = imagemPoster
+            
         }
         
-        Task{
-            let imageData = await Movie.downloadImageData(withPath:movie.posterPath)
-            let imagem = UIImage(data: imageData) ?? UIImage()
-            self.posterImage.image = imagem
-        }
-        
-        
-    //novo q tristeza meu deus
-       //backdropImage.image = UIImage(named: movie.backdropPath)
+        backdropImage.image = UIImage(named: movie.backdropPath)
         titleLabel.text = movie.title
-       // posterImage.image = UIImage(named: movie.posterPath)
+        
+        
+        // novo
+        posterImage.image = UIImage(named: movie.posterPath)
         ratingLabel.text = "Rating: \(movie.voteAverage)/10"
         overviewLabel.text = movie.overview
-
+    
     }
-
-
+    
+    
 }
+

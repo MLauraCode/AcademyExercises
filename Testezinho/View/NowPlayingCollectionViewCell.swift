@@ -18,6 +18,7 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
     func setup(title: String, year:String, image: UIImage){
         titleLabel.text = title
         dateLabel.text = year
+        // tinha um self antes de imageView
         self.imageView.image = image
     }
 }

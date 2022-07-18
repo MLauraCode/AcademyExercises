@@ -9,14 +9,16 @@ import Foundation
 
 extension Movie {
     
+   // MARK: - Download de populares
     static let urlComponents = URLComponents(string: "https://api.themoviedb.org/")!
     
     static func popularMoviesAPI() async -> [Movie] {
         
         var components = Movie.urlComponents
-        components.path = "/3/movie/Popular"
+        components.path = "/3/movie/popular"
         components.queryItems = [
-            URLQueryItem(name: "api_key", value: Movie.apiKey)]
+            URLQueryItem(name: "api_key", value: Movie.apiKey)
+        ]
         
         
         let session = URLSession.shared
@@ -26,22 +28,24 @@ extension Movie {
             
         let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
-        let movieResult = try decoder.decode(MoviesResponse.self, from:data)
+        let  movieResult = try decoder.decode(MoviesResponse.self, from:data)
             
             return movieResult.results
             
         }catch{
-            print(error)
+            print(error.localizedDescription)
         }
         return []
     }
     
-    static func nowPlayingMoviesAPI() async -> [Movie] {
+    // MARK: - Download de nowplaying
+   static func nowPlayingMoviesAPI() async -> [Movie] {
         
         var components = Movie.urlComponents
-        components.path = "/3/movie/NowPlaying"
+        components.path = "/3/movie/now_playing"
         components.queryItems = [
-            URLQueryItem(name: "api_key", value: Movie.apiKey)]
+            URLQueryItem(name: "api_key", value: Movie.apiKey)
+        ]
         
         let session = URLSession.shared
         
@@ -60,13 +64,15 @@ extension Movie {
         return []
         
     }
- 
+    
+ // MARK: Download de Upcoming
     static func upcomingMoviesAPI() async -> [Movie] {
         
         var components = Movie.urlComponents
-        components.path = "/3/movie/Upcoming"
+        components.path = "/3/movie/upcoming"
         components.queryItems = [
-            URLQueryItem(name: "api_key", value: Movie.apiKey)]
+            URLQueryItem(name: "api_key", value: Movie.apiKey)
+        ]
         
         let session = URLSession.shared
         
@@ -85,7 +91,7 @@ extension Movie {
         return []
         
         
-    }
+    } 
     // MARK: - Download de Imagens
     
     static func downloadImageData(withPath: String) async -> Data {
@@ -99,7 +105,7 @@ extension Movie {
             let (data,response) = try await session.data(from:url)
             return data
         }catch{
-            print ( error )
+            print(error)
         }
         
         return Data()
