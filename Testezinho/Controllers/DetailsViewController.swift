@@ -24,6 +24,10 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         
         
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped))
+        posterImage.addGestureRecognizer(tapGR)
+        posterImage.isUserInteractionEnabled = true
+        
         
         guard let movie = movie else {return}
         
@@ -51,6 +55,20 @@ class DetailsViewController: UIViewController {
         ratingLabel.text = "Rating: \(movie.voteAverage)/10"
         overviewLabel.text = movie.overview
     
+    }
+    
+    @objc func imageTapped(sender:UITapGestureRecognizer){
+        if sender.state == .ended{
+            performSegue(withIdentifier: "posterSegue", sender: movie)
+        }
+    }
+    
+    override func prepare(for segue:UIStoryboardSegue, sender:Any?) {
+        
+        if let destination = segue.destination as? PosterViewController{
+            let movie = sender as? Movie
+            destination.movie = movie
+        }
     }
     
     
