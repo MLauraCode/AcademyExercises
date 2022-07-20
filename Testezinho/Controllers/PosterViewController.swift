@@ -6,28 +6,28 @@
 //
 
 import UIKit
-
-class PosterViewController: UIViewController{
-    var movie: Movie?
-    @IBOutlet var posterImageView: UIImageView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    class PosterViewController: UIViewController{
+        var movie: Movie?
         
-        guard let movie = movie else{
-            return
-        }
         
-        Task {
-            let imageData = await Movie.downloadImageData(withPath: movie.posterPath)
-            let imagem = UIImage(data: imageData) ?? UIImage()
+        
+        @IBOutlet var posterImageView:UIImageView!
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
             
-            self.posterImageView.image = imagem
+            guard let movie = movie else{
+                return
+            }
+            
+            Task {
+                let imageData = await Movie.downloadImageData(withPath: movie.posterPath)
+                let imagem = UIImage(data: imageData) ?? UIImage()
+                
+                self.posterImageView.image = imagem
+            }
+            posterImageView.image = UIImage(named:movie.posterPath)
         }
-        posterImageView.image = UIImage(named:movie.posterPath)
-    }
-
-   
 
 
 }

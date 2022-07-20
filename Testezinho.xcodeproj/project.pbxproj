@@ -19,6 +19,10 @@
 		76914842287DF7EC00628BEB /* Movie+Upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7691483A287DF7EC00628BEB /* Movie+Upcoming.swift */; };
 		76914844287E145100628BEB /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76914843287E145100628BEB /* FeaturedViewController+UICollectionViewDataSource.swift */; };
 		7695DCFE28873E2A00FF42A8 /* PosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7695DCFD28873E2A00FF42A8 /* PosterViewController.swift */; };
+		7695DD062887809F00FF42A8 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7695DD052887809F00FF42A8 /* TrendingViewController.swift */; };
+		7695DD08288780BB00FF42A8 /* TrendingViewController+CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7695DD07288780BB00FF42A8 /* TrendingViewController+CollectionViewDataSource.swift */; };
+		7695DD0A288780D700FF42A8 /* TrendingViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7695DD09288780D700FF42A8 /* TrendingViewDelegate.swift */; };
+		7695DD0C28878FF200FF42A8 /* TrendingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7695DD0B28878FF200FF42A8 /* TrendingCollectionViewCell.swift */; };
 		76A8C753287F3F01008B2784 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A8C752287F3F01008B2784 /* DetailsViewController.swift */; };
 		76A8C755287F47E2008B2784 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A8C754287F47E2008B2784 /* FeaturedViewController+UICollectionViewDelegate.swift */; };
 		76B9DAF12881E7F200AAFD2C /* TMDB-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76B9DAF02881E7F200AAFD2C /* TMDB-Info.plist */; };
@@ -45,6 +49,10 @@
 		7691483C287DF7EC00628BEB /* Movie+NowPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+NowPlaying.swift"; sourceTree = "<group>"; };
 		76914843287E145100628BEB /* FeaturedViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 		7695DCFD28873E2A00FF42A8 /* PosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterViewController.swift; sourceTree = "<group>"; };
+		7695DD052887809F00FF42A8 /* TrendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		7695DD07288780BB00FF42A8 /* TrendingViewController+CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingViewController+CollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		7695DD09288780D700FF42A8 /* TrendingViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewDelegate.swift; sourceTree = "<group>"; };
+		7695DD0B28878FF200FF42A8 /* TrendingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCollectionViewCell.swift; sourceTree = "<group>"; };
 		76A8C752287F3F01008B2784 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		76A8C754287F47E2008B2784 /* FeaturedViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		76B9DAF02881E7F200AAFD2C /* TMDB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMDB-Info.plist"; sourceTree = "<group>"; };
@@ -79,6 +87,9 @@
 				76A8C752287F3F01008B2784 /* DetailsViewController.swift */,
 				76A8C754287F47E2008B2784 /* FeaturedViewController+UICollectionViewDelegate.swift */,
 				7695DCFD28873E2A00FF42A8 /* PosterViewController.swift */,
+				7695DD052887809F00FF42A8 /* TrendingViewController.swift */,
+				7695DD07288780BB00FF42A8 /* TrendingViewController+CollectionViewDataSource.swift */,
+				7695DD09288780D700FF42A8 /* TrendingViewDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -91,6 +102,7 @@
 				760072BD287C98050021D774 /* PopularCollectionViewCell.swift */,
 				760072BF287C984B0021D774 /* NowPlayingCollectionViewCell.swift */,
 				760072C1287C989A0021D774 /* UpcomingCollectionViewCell.swift */,
+				7695DD0B28878FF200FF42A8 /* TrendingCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -230,8 +242,12 @@
 				76914844287E145100628BEB /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */,
 				76914842287DF7EC00628BEB /* Movie+Upcoming.swift in Sources */,
 				760072BE287C98050021D774 /* PopularCollectionViewCell.swift in Sources */,
+				7695DD062887809F00FF42A8 /* TrendingViewController.swift in Sources */,
+				7695DD0C28878FF200FF42A8 /* TrendingCollectionViewCell.swift in Sources */,
 				76914840287DF7EC00628BEB /* Movie.swift in Sources */,
+				7695DD0A288780D700FF42A8 /* TrendingViewDelegate.swift in Sources */,
 				7691483D287DF7EC00628BEB /* Movie+TrendingThisWeek.swift in Sources */,
+				7695DD08288780BB00FF42A8 /* TrendingViewController+CollectionViewDataSource.swift in Sources */,
 				7691483E287DF7EC00628BEB /* Movie+Popular.swift in Sources */,
 				76F4F7E92873777800770739 /* FeaturedViewController.swift in Sources */,
 				7695DCFE28873E2A00FF42A8 /* PosterViewController.swift in Sources */,
