@@ -17,9 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1341"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BGDAVIEW" translatesAutoresizingMaskIntoConstraints="NO" id="VMT-NI-Shg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BGDAVIEW" translatesAutoresizingMaskIntoConstraints="NO" id="VMT-NI-Shg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1341"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VMT-NI-Shg" secondAttribute="height" multiplier="46:149" id="qCz-7D-Jeh"/>
+                                </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nI0-of-dKf">
                                 <rect key="frame" x="0.0" y="140" width="414" height="1118"/>
@@ -353,8 +355,12 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="nI0-of-dKf" secondAttribute="leading" id="AuE-zE-jB9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="nI0-of-dKf" secondAttribute="top" id="QwS-oo-xRQ"/>
+                            <constraint firstItem="VMT-NI-Shg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mlH-cB-nTr"/>
                             <constraint firstItem="nI0-of-dKf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oat-fD-FWe"/>
+                            <constraint firstItem="VMT-NI-Shg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="s2v-fo-usz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nI0-of-dKf" secondAttribute="bottom" id="t9r-xt-qoe"/>
+                            <constraint firstItem="VMT-NI-Shg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uIO-1a-e3s"/>
+                            <constraint firstAttribute="bottom" secondItem="VMT-NI-Shg" secondAttribute="bottom" id="zJU-NG-hVg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Featured" id="bGk-ec-Ebn"/>
@@ -552,15 +558,17 @@
             <objects>
                 <viewController id="54G-9r-wg8" customClass="PosterViewController" customModule="Testezinho" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lMv-1T-mvp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1341"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BGDAVIEW" translatesAutoresizingMaskIntoConstraints="NO" id="02z-lP-qpl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BGDAVIEW" translatesAutoresizingMaskIntoConstraints="NO" id="02z-lP-qpl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1341"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="02z-lP-qpl" secondAttribute="height" multiplier="46:149" id="JhV-5N-NnF"/>
+                                </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vj2-d7-1vG">
-                                <rect key="frame" x="0.0" y="112" width="375" height="593"/>
+                                <rect key="frame" x="0.0" y="112" width="414" height="1122"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
@@ -569,18 +577,23 @@
                         <constraints>
                             <constraint firstItem="Vj2-d7-1vG" firstAttribute="leading" secondItem="lMv-1T-mvp" secondAttribute="leading" id="GQ6-CZ-Oq9"/>
                             <constraint firstItem="Vj2-d7-1vG" firstAttribute="top" secondItem="4PD-51-ijR" secondAttribute="top" constant="24" id="KMb-oC-8uG"/>
+                            <constraint firstAttribute="bottom" secondItem="02z-lP-qpl" secondAttribute="bottom" id="LaB-Na-iCy"/>
+                            <constraint firstItem="02z-lP-qpl" firstAttribute="trailing" secondItem="4PD-51-ijR" secondAttribute="trailing" id="TcC-2M-WjQ"/>
+                            <constraint firstItem="02z-lP-qpl" firstAttribute="top" secondItem="lMv-1T-mvp" secondAttribute="top" id="Ucb-WG-lk7"/>
                             <constraint firstItem="4PD-51-ijR" firstAttribute="bottom" secondItem="Vj2-d7-1vG" secondAttribute="bottom" constant="24" id="VoB-6x-fG6"/>
+                            <constraint firstItem="02z-lP-qpl" firstAttribute="leading" secondItem="4PD-51-ijR" secondAttribute="leading" id="xgY-uE-rNe"/>
                             <constraint firstAttribute="trailing" secondItem="Vj2-d7-1vG" secondAttribute="trailing" id="yjF-Ie-tky"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Y16-af-Hic"/>
+                    <size key="freeformSize" width="414" height="1341"/>
                     <connections>
                         <outlet property="posterImageView" destination="Vj2-d7-1vG" id="Uz4-sP-qpd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUq-ft-Dou" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3598" y="-116"/>
+            <point key="canvasLocation" x="3596.8000000000002" y="-116.37931034482759"/>
         </scene>
         <!--Trending View Controller-->
         <scene sceneID="qqS-iM-sbv">
@@ -762,11 +775,17 @@
         <scene sceneID="g0H-7i-F44">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nac-cR-naE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="flame" catalog="system" selectedImage="flame" id="d9k-Zf-umm"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="flame" catalog="system" selectedImage="flame" id="d9k-Zf-umm">
+                        <color key="badgeColor" red="0.52156862749999999" green="0.3294117647" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="40U-Vr-DN3">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.52156862749999999" green="0.3294117647" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

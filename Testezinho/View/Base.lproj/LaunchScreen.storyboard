@@ -16,9 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BGDAVIEW" translatesAutoresizingMaskIntoConstraints="NO" id="MLY-3x-zcL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="BGDAVIEW" translatesAutoresizingMaskIntoConstraints="NO" id="MLY-3x-zcL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MLY-3x-zcL" secondAttribute="height" multiplier="207:448" id="eaR-oJ-NWr"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Late Nights" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PE7-qg-jkF">
                                 <rect key="frame" x="104" y="428" width="287" height="41"/>
@@ -34,6 +36,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MLY-3x-zcL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="J2a-1d-Q23"/>
+                            <constraint firstItem="MLY-3x-zcL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VDO-4M-AkF"/>
+                            <constraint firstAttribute="trailing" secondItem="MLY-3x-zcL" secondAttribute="trailing" id="W8m-Y2-tWL"/>
+                            <constraint firstAttribute="bottom" secondItem="MLY-3x-zcL" secondAttribute="bottom" id="ufR-dh-NPT"/>
+                        </constraints>
                     </view>
                     <size key="freeformSize" width="375" height="667"/>
                 </viewController>
